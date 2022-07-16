@@ -21,7 +21,7 @@ Set is as a crontab to run more frequently (Recommeded)
 FILE="/home/maxadmin/checkurls.txt"
 
 #SMTP Server Details for sending emails
-SMTPSERVER="10.192.97.84"
+SMTPSERVER="10.13.15.15"
 SMTPSERVERPORT="25"
 
 #Email Template file containing the above text that will be replaced
