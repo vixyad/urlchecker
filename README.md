@@ -4,6 +4,12 @@
 Shell script to check List of URLs using CURL and test for response
 Can be used to check long list of URLs continuously every few minutes and send email notification in case of any URL failures.
 
+### How it works
+* Goes through all the URLs in the script one by one
+* Curls each of the URLs
+* Checks the reponse for the text
+* Sends email with the list of URLs that fail to match the reponse text
+
 ### Features
 * Can curl the URLs and check different Reponses for different URLs
 * Can test common multiple set of reponses for each URL
@@ -12,8 +18,10 @@ Can be used to check long list of URLs continuously every few minutes and send e
 * Sends email in case of change of number of failed urls immediately.
 
 ### Usage
-Set the URLs in the array in the script and save as a shell filed, set execution flag to the file and execute the shell script
-Set is as a crontab to run more frequently (Recommeded)
+* Set the URLs in the array in the script and save as a shell filed, set execution flag to the file and execute the shell script
+* Set is as a crontab to run more frequently (Recommeded)
+* Create a mail template file including the telnet commands so that the script can execute the statements and send notifications
+* 
 
 ### Source
 ```bash
@@ -236,4 +244,5 @@ fi
 ### Pending changes
 * Make email sending better instead of telnet mail template
 * Handle authentication for SMTP for servers that require
-* Send fancier emails
+* Send better HTML emails
+* 
